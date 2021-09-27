@@ -1,0 +1,136 @@
+*{
+    margin:0;
+    padding:0;
+    font-size: 16px;
+
+}
+/*background*/
+.main{
+    width:100%;
+    background:url(beach.jpg);
+    background-position: center;
+    background-size:cover;
+    height:109vh;
+}
+
+.icon{
+    width: 200px;
+    float:left;
+    height:70px;
+
+}
+/*TravBlog logo*/
+.logo{
+    color:#ffffff;
+    font-size: 6rem;
+    font-family:arial;
+    text-shadow: black 2px 2px;
+    padding-left:223px;
+    float:left;
+    padding-top:130px;
+}
+/*TravBlog tagline*/
+.content{
+    width:535px;
+    height:227;
+    font-size: 2.5rem;
+    text-shadow: gray 2px 2px;
+    padding-top: 280px;
+    padding-left: 116px;
+    color:white;
+    font-family: arial;
+    
+}
+/*username/password/sigin and create account box*/
+.form{
+    width:250px;
+    height:280px;
+    position:absolute;
+    top:237px;
+    left:870px;
+    background:linear-gradient(to top,rgba(255,255,255)50%,rgb(255,255,255)50%);
+    border-radius:10px;
+    padding:25px;
+
+   
+}
+/*signin and craete account box features*/
+.btn{
+    width:160px;
+    height:40px;
+    background:#f5b40d;
+    border:none;
+    margin-top: 15px;
+    margin-bottom:10px;
+    margin-left:50px;
+    font-size:18px;
+    border-radius:10px;
+    cursor:pointer;
+}
+.btn{
+    outline:none;
+}
+
+.form input{
+    width:240px;
+    height: 35px;
+    background:transparent;
+    border-bottom:1px solid #f5b40d;
+    border-top:1px solid #f5b40d;
+    border-right:1px solid #f5b40d;
+    border-left:1px solid #f5b40d;
+    border-radius: 10px;
+    color:black;
+    font-size:15px;
+    letter-spacing:1px;
+    margin-top:30px;
+    margin-left: 7px;
+    font-family:sans-serif;
+}
+span{
+    position:absolute;
+    background:#ffffff;
+    transform:translate(-50%,-50%);
+    pointer-events:none;
+    border-radius:50%;
+    animation:animate 1s linear infinite;
+}
+
+
+ 
+@keyframes animate
+{
+    0%
+    {
+        width:0px;
+        height:0px;
+        opacity:0.5;
+    }
+    100%
+    {
+        width:50px;
+        height:50px;
+        opacity:0;
+    }
+}
+/* Responsive Screen*/
+@media screen and (max-width: 1100px)
+{
+    .main{
+        width:100%;
+        height:650px;
+    }
+    .logo{
+        font-size: 4rem;
+        margin-left: -100px;
+        margin-top: -100px;
+    }
+    .content
+    {
+       font-size: 0px;
+    }
+    .form{
+        margin-left:-750px ;
+        margin-top: -80px;
+    }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    
+    <link rel="stylesheet" href="style.css">
+    <title>TravBlog</title>
+</head>
+<body>
+   <div class="main">
+       <div class="navbar">
+           <div class="icon">C
+               <h2 class="logo">TravBlog</h2>
+           </div>
+        
+           <div class="content">
+               <p class="par"></p>Share your favourite<br>memories and plan your<br>next adventure</p>
+           </div>
+           <!--sign-in Box--> 
+           <div class="form">
+               <!--<input type="Username" name="Username" placeholder="Enter Username Here"><br>
+               <input type="password" name="password" placeholder="Enter Password Here"><br>-->
+               <div class="form-group"><label for="username">Username</label><input type="text" id="username" name="username" required="required" /></div>
+               <div class="form-group"><label for="password">Password</label><input type="password" id="password" name="password" required="required" /></div>
+               
+               <button class="btn"><a href ="landing.html">Sign in</a></button><br>
+               <button class="btn"><a href ="#">Create Account</a></button>
+           </div>
+           
+          </div>
+       </div>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+   <script>
+       const buttons=document.querySelectorAll('a');
+buttons.forEach(btn=>{
+    btn.addEventListener('click',function(e){
+
+        let x=e.clentX-e.target.offsetLeft;
+        let y=e.clientY-e.target.offsetTop;
+
+        let ripples=document.createElement('span');
+        ripples.style.left=x+'px';
+        ripples.style.top=y+'px';
+        this.appendChild(ripples);
+
+        setTimeout(()=>{
+            ripples.remove()
+        },1000);
+    })
+})
+     var app=new Vue({
+         el:"#app",
+         data:{
+             password:''
+         }
+    });
+   </script>
+</body>
+</html>

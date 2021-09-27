@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TravBlog</title>
+    <link rel="stylesheet" href="landing.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <div class ="container" id="blur">
+      <nav class="navbar">
+        <div class="navbar__container">
+          <a href="#home" id="navbar__logo">TravBlog</a>
+        
+          <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span> <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <ul class="navbar__menu">
+            <li class="navbar__item">
+              <a href="#home" class="navbar__links" id="home-page">Home</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#about" class="navbar__links" id="about-page">Favourite</a>
+            </li>
+            <li class="navbar__item">
+              <a href="index.html" class="navbar__links" id="services-page"
+                >Register</a>
+            <li class="navbar__item">
+              <a href="#services" class="navbar__links" id="services-page"
+                >Profile</a>  
+          </li>
+          
+          </ul>
+          <!--Search bar which is present inside the Navbar-->
+          <div class = "nav-right">
+            <div class="search-box">
+              <img src="search_black_24dp.svg">
+              <input type="text" placeholder="Search">
+            </div>
+            
+            
+          </div>
+        </div>
+      </nav>
+      
+
+      <!-- feed section -->
+      <div class="services" id="services">
+      
+        <div class="services__wrapper">
+          <div class="services__card">
+              <a href="#"onclick="toggle()"><img class="santorini_img"src="santorini.jpg"></a>
+          </div>
+          <div class="services__card">
+              <a href="#"><img class="austria_img" src="austria.jpg"></a>
+          </div>
+          <div class="services__card">
+            <a href="#"><img class="denmark_img" src="Denmark.jpg"></a>
+          </div>
+          <div class="services__card">
+            <a href="#"><img class="japan_img" src="Sakura.jpg"></a>
+          </div>
+          <div class="services__card">
+            <img class="lanka_img" src="Sri Lanka.jpg">
+          </div>
+          <div class="services__card">
+            <img class="paris_img" src="original.jpg">
+          </div>
+          <div class="services__card">
+            <img class="singapore_img" src="singapore.jpg">
+          </div>
+          <div class="services__card">
+            <img class="greece_img" src="greece.webp">
+          </div>
+        </div>
+      </div>
+      
+
+      <!-- Footer Section which also includes a link to the contact page-->
+      <div class="footer__container">
+        <div class="footer__links">
+          <div class="footer__link--wrapper">
+            <div class="footer__link--items">
+              <h2>About Us</h2>
+              <a href="/sign__up">How it works</a>  <a href="/">Terms of Service</a>
+            </div>
+            <div class="footer__link--items">
+              <h2>Contact Us</h2>
+              <a href="/">Contact</a> <a href="/">Support</a>
+              <a href="/">Destinations</a>
+            </div>
+          </div>
+          <div class="footer__link--wrapper">
+            
+            <div class="footer__link--items">
+              <h2>Social Media</h2>
+              <a href="/">Instagram</a> <a href="/">Facebook</a>
+              <a href="/">Youtube</a> <a href="/">Twitter</a>
+            </div>
+          </div>
+        </div>
+        <section class="social__media">
+          <div class="social__media--wrap">
+            <div class="footer__logo">
+              <a href="/" id="footer__logo">TravBlog</a>
+            </div>
+            <p class="website__rights">© TravBlog 2021. All rights reserved</p>
+            <div class="social__icons">
+              <a href="/" class="social__icon--link" target="_blank"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="/" class="social__icon--link"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="/" class="social__icon--link"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a href="/" class="social__icon--link"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="/" class="social__icon--link"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!--Pop-up Screen-->
+    <div id="popup">
+      <img class="santorini_pop"src="santorini.jpg">
+      <div class="right-col"> 
+      <h2>Daniel Ricciardo</h2>
+
+        <p>I'm completely captivated by Santorini! Yes, that may become clear after four visits to this Greek island! But it's a beautiful location. Tourists flock to Santorini to see the famed white village that appears on postcards. The town of Oia is located on the island's northernmost tip.
+          Basically, every photo you take in Oia looks like it came from a calendar.
+          <br>
+          By the way, we didn't forget to finish the necessary site blogs while we were in Santorini. Our Santorini blogs include itineraries, useful recommendations, the greatest restaurants, and our favorite co-working places.
+          <br>
+          <br>
+          <a href>Click here</a> to read more of our blog. Have fun reading!</p><br><br>
+
+            <div id="app">
+            
+            <button class="like" v-on:click="increase"><img src="thumb_up_black_24dp.svg"></button>
+            <button class= "like"v-on:click="decrease"><img src="thumb_down_black_24dp.svg"></button>
+            
+            {{value}} likes
+            <ul>
+              <li v-for="task in comments">{{task}}</li>
+            </ul>
+            <input type="text" v-model ="newMessage"/>
+            <button class="comments"@click="addNewTask()">Add Comment</button><br><br>
+            
+            <a href="#" onclick="toggle()"><img class = "close" src=close_black_24dp.svg></a>
+        </div>
+      </div>
+     
+      
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script>
+
+const menu = document.querySelector('#mobile-menu');
+const menuLinks = document.querySelector('.navbar__menu');
+const navLogo = document.querySelector('#navbar__logo');
+
+// Display Mobile Menu
+const mobileMenu = () => {
+  menu.classList.toggle('is-active');
+  menuLinks.classList.toggle('active');
+};
+
+menu.addEventListener('click', mobileMenu);
+
+// Show active menu when scrolling
+const highlightMenu = () => {
+  const elem = document.querySelector('.highlight');
+  const homeMenu = document.querySelector('#home-page');
+  const aboutMenu = document.querySelector('#about-page');
+  const servicesMenu = document.querySelector('#services-page');
+  let scrollPos = window.scrollY;
+  
+
+  // adds 'highlight' class to my menu items
+  if (window.innerWidth > 960 && scrollPos < 600) {
+    homeMenu.classList.add('highlight');
+    aboutMenu.classList.remove('highlight');
+    return;
+  } else if (window.innerWidth > 960 && scrollPos < 1400) {
+    aboutMenu.classList.add('highlight');
+    homeMenu.classList.remove('highlight');
+    servicesMenu.classList.remove('highlight');
+    return;
+  } else if (window.innerWidth > 960 && scrollPos < 2345) {
+    servicesMenu.classList.add('highlight');
+    aboutMenu.classList.remove('highlight');
+    return;
+  }
+
+  if ((elem && window.innerWIdth < 960 && scrollPos < 600) || elem) {
+    elem.classList.remove('highlight');
+  }
+};
+
+window.addEventListener('scroll', highlightMenu);
+window.addEventListener('click', highlightMenu);
+
+//  Close mobile Menu when clicking on a menu item
+const hideMobileMenu = () => {
+  const menuBars = document.querySelector('.is-active');
+  if (window.innerWidth <= 768 && menuBars) {
+    menu.classList.toggle('is-active');
+    menuLinks.classList.remove('active');
+  }
+};
+
+menuLinks.addEventListener('click', hideMobileMenu);
+navLogo.addEventListener('click', hideMobileMenu);
+
+function toggle() {
+  var blur=document.getElementById('blur');
+  blur.classList.toggle('active');
+  var popup = document.getElementById('popup');
+  popup.classList.toggle('active');
+}
+
+var app=new Vue({
+   el:'#app',
+  data:{
+    newMessage:'',
+    comments:[],
+     value:0,},
+  methods:{
+    increase:function(){
+      this.value=this.value+1; },
+    decrease:function(){
+      this.value=this.value-1;},
+      addNewTask(){
+          this.comments.push(this.newMessage);
+      }
+    }
+ })
+    </script>
+  </body>
+</html>
